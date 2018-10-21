@@ -1,0 +1,9 @@
+*.pyc
+*.iml
+/node_modules
+/node
+/target
+/dist
+/etc
+/.project
+/.settings
