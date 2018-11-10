@@ -1,11 +1,10 @@
 import * as React from 'react'
 import { render } from 'react-dom'
-import s from './TodoStore'
+import TodoList from './components/TodoList'
 
-console.log(s)
 
 render(
-    <div>Salut les gens</div>,
+    <TodoList/>,
 
     document.getElementById('app')
 )

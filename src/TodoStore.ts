@@ -3,7 +3,7 @@ import { Component } from "react";
 
 export default class TodoStore {
     private static i = 0
-    public todos!: Todo[]
+    public todos: Todo[] = []
 
     static increment (){
         return this.i++
@@ -29,8 +29,8 @@ export default class TodoStore {
         this.todos = this.todos.filter(t => !t.completed)
     }
 
-    toggleTodo(todo: Todo, completed = true): void{
-        this.todos = this.todos.map(t => t === todo ? { ...t, completed } : t)
+    toggleTodo(todo: Todo): void{
+        this.todos = this.todos.map(t => t === todo ? { ...t, completed: !t.completed } : t)
     }
 
     toggleAll(completed = true){
